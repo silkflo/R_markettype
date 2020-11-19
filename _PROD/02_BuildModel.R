@@ -15,10 +15,10 @@ library(lazytrade)
 
 #path to user repo:
 #!!!Change this path!!! 
-path_user <- "C:/Users/fxtrams/Documents/000_TradingRepo/R_markettype"
+path_user <- "E:/trading/Git/R_markettype"
 #!!!Change this path!!!
 
-chart_period <- 60 
+chart_period <- 15 
 #!!!Execute code below line by line
 
 #absolute path to store model objects (useful when scheduling tasks)

@@ -18,7 +18,7 @@ library(lazytrade)
 path_user <- "E:/trading/Git/R_markettype"
 #!!!Change this path!!!
 
-chart_period <- 15 
+chart_period <- 5
 #!!!Execute code below line by line
 
 #absolute path to store model objects (useful when scheduling tasks)

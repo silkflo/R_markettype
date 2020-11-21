@@ -12,18 +12,19 @@ library(lazytrade)
 
 #path to user repo:
 #!!!Change this path!!! 
-path_user <- "C:/Users/fxtrams/Documents/000_TradingRepo/R_markettype"
+path_user <- "E:/trading/Git/R_markettype"
 
 # Defining variables to be re-used in the code
 #!!!Change this path!!! 
-path_sbx <-  "C:/Program Files (x86)/FxPro - Terminal2/MQL4/Files"
+path_sbx <-  "C:/Program Files (x86)/AM MT4 - Terminal 2/MQL4/Files"
 
-path_sbxm <- "C:/Program Files (x86)/FxPro - Terminal1/MQL4/Files"
-path_sbxd <- "C:/Program Files (x86)/FxPro - Terminal2/MQL4/Files" #development terminal
-path_sbxs <- "C:/Program Files (x86)/FxPro - Terminal3/MQL4/Files"
+path_sbxm <- "C:/Program Files (x86)/AM MT4 - Terminal 1/MQL4/Files"
+path_sbxd <- "C:/Program Files (x86)/AM MT4 - Terminal 2/MQL4/Files" #development terminal
+path_sbxs <- "C:/Program Files (x86)/AM MT4 - Terminal 3/MQL4/Files"
 # Define variables for the functions to work
-chart_period <- 60 #this variable will define market type period
+chart_period <- 5 #this variable will define market type period
 num_cols <- 64
+#(24*5 = 120 minutes per row)
 
 #absolute path to store model objects (useful when scheduling tasks)
 path_model <- file.path(path_user, "_MODELS")
@@ -67,7 +68,7 @@ for (PAIR in Pairs) {
   my_market_prediction <- mt_evaluate(x = df,
                                       path_model = path_model,
                                       num_cols = num_cols,
-                                      timeframe = 60) 
+                                      timeframe = 5) 
   # predicted value to write
   my_market <- my_market_prediction  %>% select(predict)
   
